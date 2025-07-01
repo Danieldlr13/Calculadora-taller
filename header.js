@@ -35,17 +35,36 @@ boldBtn.addEventListener("click", function() {
     const userAgent = navigator.userAgent;
     
     if (/android/i.test(userAgent)) {
-        // Prueba con diferentes esquemas para Android
-        try {
-            // Primer intento: con el package oficial de Bold
-            window.location = 'intent://main/#Intent;scheme=bold;package=co.com.bold.mobile;end';
-        } catch (e) {
-            // Segundo intento: esquema alternativo
-            window.location = 'bold://main';
-        }
+        // Para Android - probamos diferentes esquemas
+        const schemes = [
+            'boldapp://',
+            'bold-mobile://',
+            'co.com.bold.mobile://',
+            'intent://launch/#Intent;scheme=boldapp;package=co.com.bold.mobile;end',
+            'intent://launch/#Intent;scheme=bold;package=co.com.bold.mobile;end'
+        ];
+        
+        // Probar cada esquema
+        schemes.forEach((scheme, index) => {
+            setTimeout(() => {
+                window.location = scheme;
+            }, index * 500);
+        });
+        
     } else if (/iPad|iPhone|iPod/.test(userAgent)) {
-        // Para iOS
-        window.location = 'bold://main';
+        // Para iOS - probamos diferentes esquemas
+        const iosSchemes = [
+            'boldapp://',
+            'bold-mobile://',
+            'bold://app'
+        ];
+        
+        // Probar cada esquema
+        iosSchemes.forEach((scheme, index) => {
+            setTimeout(() => {
+                window.location = scheme;
+            }, index * 500);
+        });
     }
 });
 
