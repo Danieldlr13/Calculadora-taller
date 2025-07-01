@@ -29,10 +29,12 @@ calcular.addEventListener("click", function() {
     obtenerprecio.value = ""; // Limpiar el campo de entrada después del cálculo
 });
 
-// Funcionalidad para abrir Bold
+// Funcionalidad para abrir Bold - DESACTIVADO TEMPORALMENTE
+/*
 const boldBtn = document.getElementById("bold-btn");
 boldBtn.addEventListener("click", function() {
     // Simplemente intenta abrir la app Bold
     window.location = "boldapp://";
 });
+*/
 
