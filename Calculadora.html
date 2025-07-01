@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es-col">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arte de la Rosa</title>
+    <link rel="stylesheet" href="header.css">
+    <link rel="shortcut icon" href="LOGO.png" type="image/png">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+    <header>
+        <h1>Arte de la Rosa</h1>
+    </header>
+    <main class="main">
+        <section>
+            <h1>Calcular valor final.</h1>
+            <p>Valor de la pieza:</p>
+            <input type="number" inputmode="numeric" pattern="[0-9]*" id="precio" placeholder="Ingrese el valor de la pieza">
+            <button id="calcular">Calcular</button>
+            <p>Valor a cobrar:</p>
+            <p id = "inicial"></p>
+            <p id="resultado"></p>
+            <p id="iva"></p>
+            <button id="bold-btn" class="bold-button">Abrir Bold</button>
+        </section>
+    </main>
+    <footer>
+        <p>Derechos reservados &copy; 2025</p>
+        <div>
+            <a href="https://www.whatsapp.com"><img src="whatsapp.png" alt="wapicon" width="30px"></a>
+            <a href="https://www.instagram.com"><img src="instagram.png" alt ="wapinsta" width="30px" height="auto"></a>
+        </div>
+    </footer>
+    <script src="header.js"></script>
+</body>
+</html>

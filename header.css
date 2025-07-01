@@ -1,0 +1,182 @@
+header {
+    height: 60px;
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 3px 1px rgba(0, 0, 0, 0.1);
+    display: inline-flex;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 1000;
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1 {
+    user-select: none;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    margin-left: 10px;
+    background: url('https://th.bing.com/th/id/OIP.yaV7j2GroGksT2kYOa0H1AHaNI?rs=1&pid=ImgDetMain') center center;
+    -webkit-background-clip: text; /* Compatibilidad con navegadores WebKit */
+    background-clip: text;
+    color: transparent;
+}
+
+footer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #fff;
+    height:40px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    z-index: 1000;
+    align-items: center;
+    box-shadow: 0 -4px 1px rgba(0, 0, 0, 0.1);
+}
+footer p {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    margin-left: 10px;
+}
+
+footer div {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-right: 10px;
+}
+footer div a {
+    transition: all 0.5s ease-in-out;
+}
+
+footer div a:hover {
+    scale: 1.2;
+}
+
+main {
+    margin-top: 60px;
+    margin-bottom: 40px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    min-height: calc(100vh - 100px);
+    width: 100%;
+    box-sizing: border-box;
+    color: #333;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+main section {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid rgba(227, 179, 7, 0.827);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(2, 77, 63, 0.913);
+}
+
+main section h1 {
+    margin-bottom: 20px;
+    color: #426641;
+}
+
+main section p {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+section input[type="number"] {
+    width: 100%;
+    max-width: 300px;
+    padding: 15px;
+    border: #333 solid 1px;
+    border-radius: 25px;
+    font-size: 16px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+}
+
+section input[type="number"]::-webkit-outer-spin-button,
+section input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+section input[type="number"]:focus {
+    outline: none;
+    border-color: #426641;
+    box-shadow: 0 0 5px rgba(66, 102, 65, 0.3);
+}
+
+section button {
+    width: 100%;
+    max-width: 300px;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: #426641;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+section button:hover {
+    background-color: #2d4a2d;
+}
+
+.bold-button {
+    width: 100%;
+    max-width: 300px;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: hsl(173, 46%, 31%);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 20px 0 10px 0;
+}
+
+.bold-button:hover {
+    background-color: #0056b3;
+}
+
+#resultado, #inicial, #iva {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0;
+    min-height: 20px;
+    border: 1px solid #ddd;
+}
