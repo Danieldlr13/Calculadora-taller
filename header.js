@@ -32,12 +32,14 @@ calcular.addEventListener("click", function() {
 // Funcionalidad para abrir Bold
 const boldBtn = document.getElementById("bold-btn");
 boldBtn.addEventListener("click", function() {
-    // Intentar abrir la app de Bold (deep link)
-    window.location.href = "bold://";
+    const userAgent = navigator.userAgent;
     
-    // Fallback: si no se abre la app, redirigir a la web
-    setTimeout(function() {
-        window.open("https://bold.co/", "_blank");
-    }, 1000);
+    if (/android/i.test(userAgent)) {
+        // Intenta abrir la app Bold en Android
+        window.location = 'intent://bold/#Intent;scheme=bold;package=com.bold.app;end';
+    } else if (/iPad|iPhone|iPod/.test(userAgent)) {
+        // Intenta abrir la app Bold en iOS
+        window.location = 'bold://';
+    }
 });
 
