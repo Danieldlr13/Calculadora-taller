@@ -35,11 +35,17 @@ boldBtn.addEventListener("click", function() {
     const userAgent = navigator.userAgent;
     
     if (/android/i.test(userAgent)) {
-        // Intenta abrir la app Bold en Android
-        window.location = 'intent://bold/#Intent;scheme=bold;package=com.bold.app;end';
+        // Prueba con diferentes esquemas para Android
+        try {
+            // Primer intento: con el package oficial de Bold
+            window.location = 'intent://main/#Intent;scheme=bold;package=co.com.bold.mobile;end';
+        } catch (e) {
+            // Segundo intento: esquema alternativo
+            window.location = 'bold://main';
+        }
     } else if (/iPad|iPhone|iPod/.test(userAgent)) {
-        // Intenta abrir la app Bold en iOS
-        window.location = 'bold://';
+        // Para iOS
+        window.location = 'bold://main';
     }
 });
 
