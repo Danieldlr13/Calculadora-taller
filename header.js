@@ -16,7 +16,7 @@ calcular.addEventListener("click", function() {
         return;
     }
     
-    const valorfinal = precio * 1.05;
+    const valorfinal = precio * 1.07;
     const porcentajeAdicional = valorfinal - precio;
     
     // Formatear números con puntos como separadores de miles
